@@ -1,0 +1,29 @@
+<h1>Listing db_statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Database</th>
+      <th>Request date</th>
+      <th>Note</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @db_statuses.each do |db_status| %>
+      <tr>
+        <td><%= db_status.database_id %></td>
+        <td><%= db_status.request_date %></td>
+        <td><%= db_status.note %></td>
+        <td><%= link_to 'Show', db_status %></td>
+        <td><%= link_to 'Edit', edit_db_status_path(db_status) %></td>
+        <td><%= link_to 'Destroy', db_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Db status', new_db_status_path %>

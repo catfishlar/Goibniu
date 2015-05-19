@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @schema_table.name %>
+</p>
+
+<p>
+  <strong>Schema version:</strong>
+  <%= @schema_table.schema_version_id %>
+</p>
+
+<%= link_to 'Edit', edit_schema_table_path(@schema_table) %> |
+<%= link_to 'Back', schema_tables_path %>

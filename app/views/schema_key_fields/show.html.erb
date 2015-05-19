@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Schema key:</strong>
+  <%= @schema_key_field.schema_key_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @schema_key_field.name %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @schema_key_field.order %>
+</p>
+
+<%= link_to 'Edit', edit_schema_key_field_path(@schema_key_field) %> |
+<%= link_to 'Back', schema_key_fields_path %>

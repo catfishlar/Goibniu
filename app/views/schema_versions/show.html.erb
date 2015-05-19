@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Schema:</strong>
+  <%= @schema_version.schema_id %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @schema_version.version %>
+</p>
+
+<p>
+  <strong>Mysql dump:</strong>
+  <%= @schema_version.mysql_dump %>
+</p>
+
+<p>
+  <strong>Mysql distrib:</strong>
+  <%= @schema_version.mysql_distrib %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @schema_version.comment %>
+</p>
+
+<%= link_to 'Edit', edit_schema_version_path(@schema_version) %> |
+<%= link_to 'Back', schema_versions_path %>

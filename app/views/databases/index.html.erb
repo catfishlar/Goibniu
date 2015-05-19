@@ -1,0 +1,23 @@
+<h1>Database List</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Host</th>
+    <th>DB Schema</th>
+    <th>Edit</th>
+  </tr>
+
+  <% @dbs.each do |database| %>
+      <tr>
+        <td><%= link_to database.id, database%> </td>
+        <td><%= database.name %></td>
+        <td><%= database.host %></td>
+        <td><%= database.dbschema %></td>
+        <td><%= link_to 'Edit', edit_database_path(database) %></td>
+      </tr>
+  <% end %>
+</table>
+
+<%= link_to 'New Database', new_database_path %>

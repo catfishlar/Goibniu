@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  db_status_id: 1
+  name: MyString
+  engine: MyString
+  version: MyString
+  row_format: MyString
+  rows: 1
+  avg_row_length: 1
+  data_length: 1
+  max_data_length: 1
+  index_length: 1
+  data_free: 1
+  auto_increment: MyString
+  create_time: 2014-12-04 23:26:38
+  update_time: 2014-12-04 23:26:38
+  check_time: 2014-12-04 23:26:38
+  collation: MyString
+  checksum: MyString
+  create_options: MyString
+  comment: MyString
+
+two:
+  db_status_id: 1
+  name: MyString
+  engine: MyString
+  version: MyString
+  row_format: MyString
+  rows: 1
+  avg_row_length: 1
+  data_length: 1
+  max_data_length: 1
+  index_length: 1
+  data_free: 1
+  auto_increment: MyString
+  create_time: 2014-12-04 23:26:38
+  update_time: 2014-12-04 23:26:38
+  check_time: 2014-12-04 23:26:38
+  collation: MyString
+  checksum: MyString
+  create_options: MyString
+  comment: MyString

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Database:</strong>
+  <%= @db_status.database_id %>
+</p>
+
+<p>
+  <strong>Request date:</strong>
+  <%= @db_status.request_date %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @db_status.note %>
+</p>
+<%= form_tag({action: :upload}, multipart: true) do %>
+    <h5>mysql -h 10.0.249.151 -u lmurdock -p uptilt_db -B  -e "show table status" > uptilt_table_status_dec_4_2014.txt</h5>
+
+    <%= file_field_tag 'table_file' %>
+    <input name="id" type="hidden" value="<%= @db_status.id%>" />
+    <%= submit_tag 'Submit' %>
+<% end %>
+<%= link_to 'Edit', edit_db_status_path(@db_status) %> |
+<%= link_to 'Back', db_statuses_path %>

@@ -1,0 +1,93 @@
+<%= form_for(@table_status) do |f| %>
+  <% if @table_status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@table_status.errors.count, "error") %> prohibited this table_status from being saved:</h2>
+
+      <ul>
+      <% @table_status.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :db_status_id %><br>
+    <%= f.number_field :db_status_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :engine %><br>
+    <%= f.text_field :engine %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br>
+    <%= f.text_field :version %>
+  </div>
+  <div class="field">
+    <%= f.label :row_format %><br>
+    <%= f.text_field :row_format %>
+  </div>
+  <div class="field">
+    <%= f.label :rows %><br>
+    <%= f.number_field :rows %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_row_length %><br>
+    <%= f.number_field :avg_row_length %>
+  </div>
+  <div class="field">
+    <%= f.label :data_length %><br>
+    <%= f.number_field :data_length %>
+  </div>
+  <div class="field">
+    <%= f.label :max_data_length %><br>
+    <%= f.number_field :max_data_length %>
+  </div>
+  <div class="field">
+    <%= f.label :index_length %><br>
+    <%= f.number_field :index_length %>
+  </div>
+  <div class="field">
+    <%= f.label :data_free %><br>
+    <%= f.number_field :data_free %>
+  </div>
+  <div class="field">
+    <%= f.label :auto_increment %><br>
+    <%= f.text_field :auto_increment %>
+  </div>
+  <div class="field">
+    <%= f.label :create_time %><br>
+    <%= f.datetime_select :create_time %>
+  </div>
+  <div class="field">
+    <%= f.label :update_time %><br>
+    <%= f.datetime_select :update_time %>
+  </div>
+  <div class="field">
+    <%= f.label :check_time %><br>
+    <%= f.datetime_select :check_time %>
+  </div>
+  <div class="field">
+    <%= f.label :collation %><br>
+    <%= f.text_field :collation %>
+  </div>
+  <div class="field">
+    <%= f.label :checksum %><br>
+    <%= f.text_field :checksum %>
+  </div>
+  <div class="field">
+    <%= f.label :create_options %><br>
+    <%= f.text_field :create_options %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_field :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

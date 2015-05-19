@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @schema.name %>
+</p>
+<%= form_tag({action: :upload, method: :post}, multipart: true) do %>
+    <%= label_tag 'version' %>
+    <%= text_field_tag 'version' %>
+
+    <h5>mysqldump -h 10.0.249.151 -u lmurdock -p --no-data --single-transaction uptilt_db > uptilt_db-schema.sql</h5>
+
+    <%= file_field_tag 'table_file' %>
+    <input name="id" type="hidden" value="<%= @schema.id%>" />
+    <%= submit_tag 'Submit' %>
+<% end %>
+
+<%= link_to 'Edit', edit_schema_path(@schema) %> |
+<%= link_to 'Back', schemas_path %>

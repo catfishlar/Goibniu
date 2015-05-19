@@ -1,0 +1,37 @@
+<%= form_for(@schema_version) do |f| %>
+  <% if @schema_version.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@schema_version.errors.count, "error") %> prohibited this schema_version from being saved:</h2>
+
+      <ul>
+      <% @schema_version.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :schema_id %><br>
+    <%= f.number_field :schema_id %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br>
+    <%= f.text_field :version %>
+  </div>
+  <div class="field">
+    <%= f.label :mysql_dump %><br>
+    <%= f.text_field :mysql_dump %>
+  </div>
+  <div class="field">
+    <%= f.label :mysql_distrib %><br>
+    <%= f.text_field :mysql_distrib %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_field :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

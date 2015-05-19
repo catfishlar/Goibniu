@@ -1,0 +1,33 @@
+<h1>Listing schema_versions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Schema</th>
+      <th>Version</th>
+      <th>Mysql dump</th>
+      <th>Mysql distrib</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schema_versions.each do |schema_version| %>
+      <tr>
+        <td><%= schema_version.schema_id %></td>
+        <td><%= schema_version.version %></td>
+        <td><%= schema_version.mysql_dump %></td>
+        <td><%= schema_version.mysql_distrib %></td>
+        <td><%= schema_version.comment %></td>
+        <td><%= link_to 'Show', schema_version %></td>
+        <td><%= link_to 'Edit', edit_schema_version_path(schema_version) %></td>
+        <td><%= link_to 'Destroy', schema_version, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Schema version', new_schema_version_path %>

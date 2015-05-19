@@ -1,0 +1,186 @@
+/* PII:?Low?Company - */|CREATE TABLE "Admin_News_Table"  ( 
+/* PII:?Low?Company?URL - */|CREATE TABLE "Admin_Template_Table"  ( 
+/* PII:?High?PII?Email - */|CREATE TABLE "Affiliate_Table"  ( 
+/* PII:?Low?Company - */|CREATE TABLE "Asset_Library_Tag"  ( 
+/* PII:?Medium?TMI - */|CREATE TABLE "Automator_Counseling_Unsolved"  ( 
+/* PII:?Medium?TMI - API Call Payload could be a PII problem */|CREATE TABLE "Automator_Payload_API"  ( 
+/* PII:?High?PII?Email - Message - Email field could definitely be PII */|CREATE TABLE "Automator_Payload_Email_Activator"  ( 
+/* PII:?Low?Company?NameVal - Message - Name Value pair is the worst problem for Data Cleaning */|CREATE TABLE "Automator_Payload_Email_Attribute"  ( 
+/* PII:?Low?NameVal - Probably not a problem but name value pairs are hard to clean */|CREATE TABLE "Automator_Task_Attribute"  ( 
+/* PII:?Low?Company?TMI - Probalby not a problem but who and reason could be PII */|CREATE TABLE "Billing_Suppression_Table"  ( 
+/* PII:?Low?Company?TMI - location is urls and could potentially have PII */|CREATE TABLE "Cache_Message_Clicks"  ( 
+/* PII:?Low?Company - Event is a text field.  No data in QA */|CREATE TABLE "Calendar_Event_Table"  ( 
+/* PII:?Low?PII?TMI - Click tracks could be PII */|CREATE TABLE "ClickTracks_Message_Links"  ( 
+/* PII:?High?PII?Email - Comments table includes email and Comment */|CREATE TABLE "Comments_Comments_Table"  ( 
+/* PII:?High?PII?Email - Email fields could be PII */|CREATE TABLE "Comments_Table"  ( 
+/* PII:?Low?PII - agent field is 255 */|CREATE TABLE "Counter_agents"  ( 
+/* PII:?Low?Company?URL - url is vc(255) */|CREATE TABLE "Counter_counters"  ( 
+/* PII:?High?PII?PCI - CREDIT CARD TABLE is empty in QA.. It better be empty in Production! */|CREATE TABLE "Credit_Card_Table"  ( 
+/* PII:?iHigh?PII?Email - email in a mailing list and site id. */|CREATE TABLE "DG_T_Mailing_List_Email_Table"  ( 
+/* PII:?Low?Company?NameVal - Mailing list level metadata so not likely PII.  still its a name value pair and qa is empty */|CREATE TABLE "Demographic_Translation_Table"  ( 
+/* PII:?High?PII?NameVal - this has ids tied to values.  The value is text.  Need to check the values and make sure they are not PII in themselves  */|CREATE TABLE "Demographic_Values_Table"  ( 
+/* PII:?Low?Company?TMI - Name Data fields could be PII */|CREATE TABLE "Dynamic_Content"  ( 
+/* PII:?Low?Company?TMI - the seeds are in fact email addresses but they are for fictional folks.. Still what do we do wit this for QA/Dev? */|CREATE TABLE "EmailAdvisor_Seeds_Table"  ( 
+/* PII:?Low?Company?TMI - behaviour is a text field.  this is not PII but then do we have to modify what it is/does for DEV/QA?  */|CREATE TABLE "EmailLabs_Cron_Table"  ( 
+/* PII:?High?PII?Email - Email field tied to site and actions.  Very likely PII */|CREATE TABLE "Email_Referral_Email_Table"  ( 
+/* PII:?Low?Company?URL -Sender recipient ids tied to Webpage.  Investigate */|CREATE TABLE "Email_Referral_Page_Detailed_Table"  ( 
+/* PII:?Low?Company?TMI?URL - Message is to open ended investigate.  */|CREATE TABLE "Email_Referral_Referrals_Table"  ( 
+/* PII:?High?PII?Company?TMI?URL?Email - Email and Subject */|CREATE TABLE "Email_Referral_Table"  ( 
+/* PII:?Low?Company?URL?TMI - unlikely but urls and titles could encode PII */|CREATE TABLE "Email_Referral_Titles_Table"  ( 
+/* PII:?High?Company?Email?TMI - Unlikely PII but email field does have an email in it.  */|CREATE TABLE "Email_Upload_Job_History_Table"  ( 
+/* PII:?Low?Company?TMI - also unlikely PII but it does have email field with email in it */|CREATE TABLE "Email_Upload_Job_Table"  ( 
+/* PII:?Low?Company?TMI - User information  */|CREATE TABLE "Log_API_Admin"  ( 
+/* PII:?Medium?Company?URL - what do  we do when we copy the work db IP and local server?  Howis this used */|CREATE TABLE "Log_Evaluator_Instance"  ( 
+/* PII:?Low?Company?TMI - There are DB_EMAIL and DB_DVT text fields but they are only 10 long.  No records in QA.  Just error it out? */|CREATE TABLE "Log_Mailman_Detail"  ( 
+/* PII:?Medium?Company?TMI - There is a caller, work_db_host and Cleansing Server field, how are these used in a copy.  */|CREATE TABLE "Log_Recipient_List"  ( 
+/* PII:?Medium?PII?TMI - this contains MYSQL_QUERY as a text field and could contain specifics. This table could probaby be truncated in copy. */|CREATE TABLE "Log_Segmentation"  ( 
+/* PII:?Low?Company?TMI - ID and translation field is 20 characters.  No records in QA */|CREATE TABLE "Mailing_List_Autoload_Table"  ( 
+/* PII:?High?PII?Email - Email and Description */|CREATE TABLE "Mailing_List_Blacklist_Table"  ( 
+/* PII:?Medium?PII?TMI - Email ID tied to a domain */|CREATE TABLE "Mailing_List_Bounce_Cache_Table"  ( 
+/* PII:?Medium?PII?TMI - email id and content text field. */|CREATE TABLE "Mailing_List_Bounce_Error_Table"  ( 
+/* PII:?Low?Company?TMI - Should not be PII but RegEx is a text field and qA has one record keyword 1, with regex "go away" */|CREATE TABLE "Mailing_List_Bounce_Keyword_Table"  ( 
+/* PII:?Low?Company?TMI - Message ID and reason text field.  */|CREATE TABLE "Mailing_List_Bounce_Table"  ( 
+/* PII:?Low?PII?TMI - email id and reason text field */|CREATE TABLE "Mailing_List_Bounce_Text_Table"  ( 
+/* PII:?Low?PII?TMI - should be clean but it is a text field and no records in QA */|CREATE TABLE "Mailing_List_Bounce_Unknown_Table"  ( 
+/* PII:?Low?PII?TMI - should be clean but it si a text field and no records in QA */|CREATE TABLE "Mailing_List_Clickthru_Table"  ( 
+/* PII:?Low?Company?TMI - Ids and a name of a directory no records in QA */|CREATE TABLE "Mailing_List_Content_Library_Directories_Table"  ( 
+/* PII:?Low?Company?URL - file names could have PII or at least company identifying information..  */|CREATE TABLE "Mailing_List_Content_Library_Table"  ( 
+/* PII:?Low?Company?URL - file names could have PII or at least company identifying infomation...` */|CREATE TABLE "Mailing_List_Content_Table"  ( 
+/* PII:?Low?Company?TMI - all id, enum except demographic type.  No records in QA */|CREATE TABLE "Mailing_List_Demographic_Permission"  ( 
+/* PII:?Low?Company?TMI - this is not likely to have PII but could be a key to connecting the dots. No records in QA  */|CREATE TABLE "Mailing_List_Demographic_Table"  ( 
+/* PII:?Low?Company?NameVal - QA has all integers for value but it is a text field. Could identify company */|CREATE TABLE "Mailing_List_Distribution_Group_Message_Attribute_Table"  ( 
+/* PII:?Low?Company?TMI - not PII in itself but name is a freely entered field and in QA has a lot of split test group names.  */|CREATE TABLE "Mailing_List_Distribution_Group_Table"  ( 
+/* PII:?High?PII?Email - This is definitely PII */|CREATE TABLE "Mailing_List_Email_Table"  ( 
+/* PII:?Medium?PII?TMI - user id, ip, web server, site id.. and then "extra" text The extra has sql queries in QA.  Looks like a PII hole */|CREATE TABLE "Mailing_List_Event_Log_Table"  ( 
+/* PII:?Medium?PII?TMI -  name desciption ids .. */|CREATE TABLE "Mailing_List_Group_Table"  ( 
+/* PII:?Medium?PII?TMI -  name description ids .. */|CREATE TABLE "Mailing_List_Group_Table_Old"  ( 
+/* PII:?Low?Company?TMI -  how is this used?  */|CREATE TABLE "Mailing_List_Lock_Table"  ( 
+/* PII:?Low?PII?NameVal - Message, Name value.  */|CREATE TABLE "Mailing_List_Message_Attributes_Table"  ( 
+/* PII:?Low?Company?TMI - Images blob associated with a message */|CREATE TABLE "Mailing_List_Message_Images_Table"  ( 
+/* PII:?Medium?Company?URL?TMI - ids associated with labels links and notes.  links definitely identify companies, but also how is this used? */|CREATE TABLE "Mailing_List_Message_Notes_Table"  ( 
+/* PII:?High?PII?Email?TMI - The message.   */|CREATE TABLE "Mailing_List_Message_Table"  ( 
+/* PII:?Low?PII?TMI - text fields hold a html about mailing lists */|CREATE TABLE "Mailing_List_Message_Template_Table"  ( 
+/* PII:?High?PII?Email -  Email field */|CREATE TABLE "Mailing_List_Reply_Email_Table"  ( 
+/* PII:?Low?PII?TMI - QA data not extensive.  Results could be list of members., name and behavior fields in a report table. */|CREATE TABLE "Mailing_List_Report_Generator_Table"  ( 
+/* PII:?High?PII?Email - email*/|CREATE TABLE "Mailing_List_Reports_Email1_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Mailing_List_Reports_Email2_Table"  ( 
+/* PII:?High?PII?Email - email  */|CREATE TABLE "Mailing_List_Reports_Email3_Table"  ( 
+/* PII:?High?PII?Email - email  */|CREATE TABLE "Mailing_List_Reports_Email4_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Mailing_List_Reports_Email5_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Mailing_List_Reports_Email6_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Mailing_List_Reports_Email7_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Mailing_List_Reports_Email8_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Mailing_List_Reports_Email9_Table"  ( 
+/* PII:?Low?PII?TMI - behaviour field is wide open.  QA has no records */|CREATE TABLE "Mailing_List_Reports_Table"  ( 
+/* PII:?Medium?PII?TMI - lots of text fields that need to be investigated*/|CREATE TABLE "Mailing_List_Rule_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Mailing_List_Send_Priority_Mailman_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Mailing_List_Send_Priority_Table"  ( 
+/* PII:?Low?PII?TMI - Behavior field needs investigation*/|CREATE TABLE "Mailing_List_Statistics_History_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Mailing_List_Statistics_Referral_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Mailing_List_Statistics_Reply_Table"  ( 
+/* PII:?Low?PII?TMI - value needs to be investigated. */|CREATE TABLE "Mailing_List_Statistics_Visit_Demographic_Table"  ( 
+/* PII:?Low?Company?TMI - location text field needs investigation */|CREATE TABLE "Mailing_List_Statistics_Visit_Location_Table"  ( 
+/* PII:?Low?Company?TMI - location and extra need investigation.  No records in QA */|CREATE TABLE "Mailing_List_Statistics_Visit_Table"  ( 
+/* PII:?Low?Company?TMI - locaiton and extra need investigation.   */|CREATE TABLE "Mailing_List_Statistics_Visit_Table_Old"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Mailing_List_Suppression_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Mailing_List_Suppressionlist_Email_Table"  ( 
+/* PII:?Medium?PII?TMI - Behaviour is text */|CREATE TABLE "Mailing_List_Suppressionlist_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Mailing_List_Table"  ( 
+/* PII:?Medium?PII?TMI - "data" text field and user id that is vc 100 (email?)  */|CREATE TABLE "Mailing_List_Trigger_History_Table"  ( 
+/* PII:?Medium?PII?TMI - "Data" text table  */|CREATE TABLE "Mailing_List_Trigger_Table"  ( 
+/* PII:?Low?Company?TMI - What do we do with host names in a copy? */|CREATE TABLE "Mailman_Tasks_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Member_Accounttype_Table"  ( 
+/* PII:?High?PII?Email - Definitely PII */|CREATE TABLE "Member_Table"  ( 
+/* PII:?High?PII?Email - Message Board -  email */|CREATE TABLE "Message_Board_Message_Table"  ( 
+/* PII:?Low?PII?TMI - Message Board -  empty in QA.  Lots of user entered text and string fields. */|CREATE TABLE "Message_Board_Table"  ( 
+/* PII:?Medium?PII?TMI - Message Board - owner is email */|CREATE TABLE "Message_Notes"  ( 
+/* PII:?High?PII?Email - email  */|CREATE TABLE "Newsletter_Parsemail_Clients_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "Partner_Email_Notification_Table"  ( 
+/* PII:?High?PII?Email - emails */|CREATE TABLE "Partner_Option_Table"  ( 
+/* PII:?High?PII?Email - emails */|CREATE TABLE "Partner_Table"  ( 
+/* PII:?Low?Company?TMI - Answer needs some thought */|CREATE TABLE "Poll_Answer_Table"  ( 
+/* PII:?Low?Company?TMI - question and behavior needs thought */|CREATE TABLE "Poll_Question_Table"  ( 
+/* PII:?Low?Company?TMI - empty in QA ANSWER_FORMAT_* text fields need investigation  */|CREATE TABLE "Poll_Table"  ( 
+/* PII:?Low?Company?TMI - Product Rating -   no data in QA and lots of text fields */|CREATE TABLE "Product_Rating_Group_Table"  ( 
+/* PII:?Low?Company?TMI - Product Rating -  review text field.  No data in QA */|CREATE TABLE "Product_Rating_Review_Table"  ( 
+/* PII:?Low?Company?TMI - Product Rating -  unlikely but text and no data in QA */|CREATE TABLE "Product_Rating_Table"  ( 
+/* PII:?High?PII?TMI - CLient key is an issue.  No data in QA */|CREATE TABLE "Quick_Login_Table"  ( 
+/* PII:?Low?Company?URL - location is a url.. what do we do with it in the copy?  */|CREATE TABLE "Redirection_Table"  ( 
+/* PII:?High?PII?NameVal - Major name value pair table to put PII in  */|CREATE TABLE "Relational_Attributes"  ( 
+/* PII:?High?PII?Email - email  */|CREATE TABLE "Reply_Headers"  ( 
+/* PII:?Low?Company?TMI - probably nothing.  No idea what this does.  No data in QA */|CREATE TABLE "SVB_AO_Table"  ( 
+/* PII:?High?PII?Email - email  */|CREATE TABLE "SVB_Alert_Stats_Table"  ( 
+/* PII:?High?PII?Email - PII */|CREATE TABLE "Sales_Executive_Table"  ( 
+/* PII:?Medium?PII?TMI - Note text field needs investigation.  Empty in QA */|CREATE TABLE "Sales_Log_Table"  ( 
+/* PII:?Low?Company?TMI - Search? */|CREATE TABLE "Search_Daily_Word_Table"  ( 
+/* PII:?Low?Company?URL - Search? */|CREATE TABLE "Search_Documents_Table"  ( 
+/* PII:?Low?Company?TMI - Search? */|CREATE TABLE "Search_Engine_Table"  ( 
+/* PII:?Low?Company?TMI - Search? */|CREATE TABLE "Search_Phrase_Table"  ( 
+/* PII:?Low?Company?TMI - Search? */|CREATE TABLE "Search_Statistics_Empty_Table"  ( 
+/* PII:?Low?Company?TMI - Search? */|CREATE TABLE "Search_Statistics_IP_Table"  ( 
+/* PII:?Low?Company?URL - Search? */|CREATE TABLE "Search_URL_Table"  ( 
+/* PII:?Low?Company?TMI - Search? */|CREATE TABLE "Search_Word_Table"  ( 
+/* PII:?Low?PII?TMI - Paramter list and contraint query could have email  */|CREATE TABLE "Segment_Constraint"  ( 
+/* PII:?Low?PII?TMI - restriction logic and predicate could have email */|CREATE TABLE "Segment_Master"  ( 
+/* PII:?Low?PII?TMI - Behavior.. again.  */|CREATE TABLE "Segment_Status"  ( 
+/* PII:?Low?PII?TMI - Data text field is open ended.  */|CREATE TABLE "Session_Table"  ( 
+/* PII:?Low?PII?TMI - We mgiht want to do something about Domain */|CREATE TABLE "Spam_Complaint_Cache_Table"  ( 
+/* PII:?Low?PII?TMI - NOTE and COMP_MESSAGE text field */|CREATE TABLE "Spam_Complaint_Table"  ( 
+/* PII:?Low?PII?TMI - Content text field */|CREATE TABLE "Spam_Complaint_Text_Table"  ( 
+/* PII:?Low?Company?TMI - Note text field  */|CREATE TABLE "Spam_Notes_Table"  ( 
+/* PII:?Low?Company?Url - page and Activity text fields */|CREATE TABLE "Statistics_Loadtime_Table"  ( 
+/* PII:?Low?Company?TMI - Empty in QA, Statistics is probably clean. */|CREATE TABLE "Statistics_Table"  ( 
+/* PII:?Low?Company?TMI - Survey -lots of text fields related to a Survey */|CREATE TABLE "Survey_Table"  ( 
+/* PII:?Low?Company?TMI - Survey - value text field is open ended but and qa is empty */|CREATE TABLE "Survey_TempStats_Table"  ( 
+/* PII:?High?PII?Email - Email */|CREATE TABLE "T_Mailing_List_Email_Table"  ( 
+/* PII:?Low?PII?TMI - Recipient is an ID in QA but could be email in some cases.  need to investigate  */|CREATE TABLE "Trigger_Account_Table"  ( 
+/* PII:?Low?Company?TMI - trivia - no data in QA */|CREATE TABLE "Trivia_Answer_Table"  ( 
+/* PII:?Low?Company?TMI - trivia - no data in QA */|CREATE TABLE "Trivia_Question_Table"  ( 
+/* PII:?Low?Company?TMI - trivia - no data in QA */|CREATE TABLE "Trivia_Stats_Table"  ( 
+/* PII:?Low?Company?TMI - trivia - no data in QA */|CREATE TABLE "Trivia_Table"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "User_ID_Table"  ( 
+/* PII:?Low?PII?TMI - we should be able to just purge these. What do we do with this data in copy */|CREATE TABLE "User_Session"  ( 
+/* PII:?Low?Company?TMI - Vendor Name.  No data in QA */|CREATE TABLE "WA_Vendor"  ( 
+/* PII:?Low?Company?TMI - Web Form - what do we do with an IP in a copy.  No Data in QA */|CREATE TABLE "Web_Form_Handle"  ( 
+/* PII:?High?PII?Email - Web Form -  Email */|CREATE TABLE "Web_Form_Handle_History"  ( 
+/* PII:?Low?Company?NameVal -  name value pair.   */|CREATE TABLE "attributes_content_library"  ( 
+/* PII:?Low?Company?NameVal -  name value pair.   */|CREATE TABLE "attributes_mailing_list"  ( 
+/* PII:?Low?Company?NameVal -  name value pair.   */|CREATE TABLE "attributes_member_accounttype_table"  ( 
+/* PII:?Low?Company?NameVal -  name value pair.   */|CREATE TABLE "attributes_member_table"  ( 
+/* PII:?Low?Company?NameVal -  name value pair.   */|CREATE TABLE "attributes_message_table"  ( 
+/* PII:?Low?Company?NameVal -  name value pair.   */|CREATE TABLE "attributes_template_table"  ( 
+/* PII:?High?Company?TMI - domains with the public and private keys */|CREATE TABLE "domain_keys"  ( 
+/* PII:?Medium?Company?TMI - domain name and notes*/|CREATE TABLE "domain_keys_log"  ( 
+/* PII:?Low?Company?TMI - hostname */|CREATE TABLE "landing_page_hostname"  ( 
+/* PII:?Medium?Company?TMI - Log -  Log_string contains the Query that was run.*/|CREATE TABLE "log_asset_library"  ( 
+/* PII:?Medium?PII?URL - Log - Log String has auth tokens urls probably ok */|CREATE TABLE "log_landingpages"  ( 
+/* PII:?High?PII?TMI - Log - Log_string has the query against the database */|CREATE TABLE "log_query_database"  ( 
+/* PII:?Medium?PII?TMI - Log - Script and PSuedo_SQLCALL need to checked */|CREATE TABLE "log_segment"  ( 
+/* PII:?Medium?PII?TMI - Log - sqlcall and comment might have a list. */|CREATE TABLE "log_segment_detail"  ( 
+/* PII:?Low?Company?TMI - hostname and resourcePath, how are they used in a copy */|CREATE TABLE "lp_urlpolicy"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "migration_data"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "ruletable_pp_elmcc_1012_1384231842_9006674"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "ruletable_pp_elmcc_1012_1384231842_9006674_1"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "ruletable_pp_elmcc_1012_1384231842_9006674_2"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "ruletable_pp_elmcc_1012_1384231842_9006674_prevline"  ( 
+/* PII:?High?PII?Email - email */|CREATE TABLE "ruletable_pp_elmcc_1012_1384231842_9006674_prevval"  ( 
+/* PII:?Medium?PII?TMI - log has queries in it. */|CREATE TABLE "sms_log"  ( 
+/* PII:?High?PII?Email - sms - strings */|CREATE TABLE "sms_messages"  ( 
+/* PII:?Low?Company?TMI - sms - lots of strings */|CREATE TABLE "sms_poll"  ( 
+/* PII:?Low?PII?TMI - sms - answer */|CREATE TABLE "sms_poll_answers"  ( 
+/* PII:?Low?Company?TMI - sms - behavior choice and votes */|CREATE TABLE "sms_poll_choices"  ( 
+/* PII:?High?PII?Email - sms - lots of strings */|CREATE TABLE "sms_programs"  ( 
+/* PII:?Medium?PII?TMI - sms - how do addresses work in a copy.  */|CREATE TABLE "sms_response"  ( 
+/* PII:?Low?Company?TMI - sms - keyword command */|CREATE TABLE "sms_trigger_commands"  ( 
+/* PII:?High?PII?Email - sms - recipients message, subject */|CREATE TABLE "sms_triggers"  ( 
+/* PII:?High?PII?Email - temp - email */|CREATE TABLE "temp_Segment_636_Output"  ( 
+/* PII:?High?PII?Email - temp - email */|CREATE TABLE "temp_Segment_637_Output"  ( 
+/* PII:?High?PII?Email - temp - email */|CREATE TABLE "temp_Segment_638_Output"  ( 
+/* PII:?High?PII?Email - temp - email */|CREATE TABLE "temp_Segment_639_Output"  ( 
+/* PII:?High?PII?Email - temp - email */|CREATE TABLE "temp_Segment_640_Output"  ( 
+/* PII:?High?PII?Email - temp - email */|CREATE TABLE "temp_Segment_641_Output"  ( 
+/* PII:?High?PII?Email - temp - email */|CREATE TABLE "temp_Segment_645_Output"  ( 
+/* PII:?High?PII?Email - temp - email */|CREATE TABLE "temp_Segment_646_Output"  ( 
+/* PII:?High?PII?Email - temp - email */|CREATE TABLE "temp_Segment_647_Output"  ( 
+/* PII:?High?PII?Email - temp - email */|CREATE TABLE "temp_Segment_699_Output"  ( 
+/* PII:?High?PII?Email - temp - email */|CREATE TABLE "temp_Segment_706_Output"  ( 

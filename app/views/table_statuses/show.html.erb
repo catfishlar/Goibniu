@@ -1,0 +1,99 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Db status:</strong>
+  <%= @table_status.db_status_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @table_status.name %>
+</p>
+
+<p>
+  <strong>Engine:</strong>
+  <%= @table_status.engine %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @table_status.version %>
+</p>
+
+<p>
+  <strong>Row format:</strong>
+  <%= @table_status.row_format %>
+</p>
+
+<p>
+  <strong>Rows:</strong>
+  <%= @table_status.rows %>
+</p>
+
+<p>
+  <strong>Avg row length:</strong>
+  <%= @table_status.avg_row_length %>
+</p>
+
+<p>
+  <strong>Data length:</strong>
+  <%= @table_status.data_length %>
+</p>
+
+<p>
+  <strong>Max data length:</strong>
+  <%= @table_status.max_data_length %>
+</p>
+
+<p>
+  <strong>Index length:</strong>
+  <%= @table_status.index_length %>
+</p>
+
+<p>
+  <strong>Data free:</strong>
+  <%= @table_status.data_free %>
+</p>
+
+<p>
+  <strong>Auto increment:</strong>
+  <%= @table_status.auto_increment %>
+</p>
+
+<p>
+  <strong>Create time:</strong>
+  <%= @table_status.create_time %>
+</p>
+
+<p>
+  <strong>Update time:</strong>
+  <%= @table_status.update_time %>
+</p>
+
+<p>
+  <strong>Check time:</strong>
+  <%= @table_status.check_time %>
+</p>
+
+<p>
+  <strong>Collation:</strong>
+  <%= @table_status.collation %>
+</p>
+
+<p>
+  <strong>Checksum:</strong>
+  <%= @table_status.checksum %>
+</p>
+
+<p>
+  <strong>Create options:</strong>
+  <%= @table_status.create_options %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @table_status.comment %>
+</p>
+
+<%= link_to 'Edit', edit_table_status_path(@table_status) %> |
+<%= link_to 'Back', table_statuses_path %>

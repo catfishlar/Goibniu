@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Schema table:</strong>
+  <%= @schema_field.schema_table_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @schema_field.name %>
+</p>
+
+<p>
+  <strong>Field type:</strong>
+  <%= @schema_field.field_type %>
+</p>
+
+<p>
+  <strong>Type params:</strong>
+  <%= @schema_field.type_params %>
+</p>
+
+<p>
+  <strong>Nullable:</strong>
+  <%= @schema_field.nullable %>
+</p>
+
+<p>
+  <strong>Default:</strong>
+  <%= @schema_field.default %>
+</p>
+
+<%= link_to 'Edit', edit_schema_field_path(@schema_field) %> |
+<%= link_to 'Back', schema_fields_path %>

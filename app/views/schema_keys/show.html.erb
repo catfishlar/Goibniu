@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Schema table:</strong>
+  <%= @schema_key.schema_table_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @schema_key.name %>
+</p>
+
+<p>
+  <strong>Primary:</strong>
+  <%= @schema_key.primary %>
+</p>
+
+<p>
+  <strong>Unique:</strong>
+  <%= @schema_key.unique %>
+</p>
+
+<%= link_to 'Edit', edit_schema_key_path(@schema_key) %> |
+<%= link_to 'Back', schema_keys_path %>

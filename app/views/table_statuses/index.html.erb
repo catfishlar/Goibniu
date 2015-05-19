@@ -1,0 +1,61 @@
+<h1>Listing table_statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Db status</th>
+      <th>Name</th>
+      <th>Engine</th>
+      <th>Version</th>
+      <th>Row format</th>
+      <th>Rows</th>
+      <th>Avg row length</th>
+      <th>Data length</th>
+      <th>Max data length</th>
+      <th>Index length</th>
+      <th>Data free</th>
+      <th>Auto increment</th>
+      <th>Create time</th>
+      <th>Update time</th>
+      <th>Check time</th>
+      <th>Collation</th>
+      <th>Checksum</th>
+      <th>Create options</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @table_statuses.each do |table_status| %>
+      <tr>
+        <td><%= table_status.db_status_id %></td>
+        <td><%= table_status.name %></td>
+        <td><%= table_status.engine %></td>
+        <td><%= table_status.version %></td>
+        <td><%= table_status.row_format %></td>
+        <td><%= table_status.rows %></td>
+        <td><%= table_status.avg_row_length %></td>
+        <td><%= table_status.data_length %></td>
+        <td><%= table_status.max_data_length %></td>
+        <td><%= table_status.index_length %></td>
+        <td><%= table_status.data_free %></td>
+        <td><%= table_status.auto_increment %></td>
+        <td><%= table_status.create_time %></td>
+        <td><%= table_status.update_time %></td>
+        <td><%= table_status.check_time %></td>
+        <td><%= table_status.collation %></td>
+        <td><%= table_status.checksum %></td>
+        <td><%= table_status.create_options %></td>
+        <td><%= table_status.comment %></td>
+        <td><%= link_to 'Show', table_status %></td>
+        <td><%= link_to 'Edit', edit_table_status_path(table_status) %></td>
+        <td><%= link_to 'Destroy', table_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Table status', new_table_status_path %>

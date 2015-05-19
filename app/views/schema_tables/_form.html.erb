@@ -1,0 +1,25 @@
+<%= form_for(@schema_table) do |f| %>
+  <% if @schema_table.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@schema_table.errors.count, "error") %> prohibited this schema_table from being saved:</h2>
+
+      <ul>
+      <% @schema_table.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :schema_version_id %><br>
+    <%= f.number_field :schema_version_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

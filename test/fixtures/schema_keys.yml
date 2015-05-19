@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schema_table_id: 1
+  name: MyString
+  primary: false
+  unique: false
+
+two:
+  schema_table_id: 1
+  name: MyString
+  primary: false
+  unique: false

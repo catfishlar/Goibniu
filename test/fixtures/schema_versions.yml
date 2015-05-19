@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schema_id: 1
+  version: MyString
+  mysql_dump: MyString
+  mysql_distrib: MyString
+  comment: MyString
+
+two:
+  schema_id: 1
+  version: MyString
+  mysql_dump: MyString
+  mysql_distrib: MyString
+  comment: MyString

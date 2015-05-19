@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schema_table_id: 1
+  name: MyString
+  type: 
+  size: 1
+  nullable: false
+  default: MyString
+
+two:
+  schema_table_id: 1
+  name: MyString
+  type: 
+  size: 1
+  nullable: false
+  default: MyString

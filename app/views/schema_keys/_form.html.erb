@@ -1,0 +1,33 @@
+<%= form_for(@schema_key) do |f| %>
+  <% if @schema_key.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@schema_key.errors.count, "error") %> prohibited this schema_key from being saved:</h2>
+
+      <ul>
+      <% @schema_key.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :schema_table_id %><br>
+    <%= f.number_field :schema_table_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :primary %><br>
+    <%= f.check_box :primary %>
+  </div>
+  <div class="field">
+    <%= f.label :unique %><br>
+    <%= f.check_box :unique %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -18,3 +18,7 @@ gemfile.lock
 /table_status/*
 uptilt*
 /.idea
+.DS_Store
+.classpath
+.settings
+.project
